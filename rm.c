@@ -7,10 +7,11 @@
 #include <sys/types.h>
 #include <errno.h>
 #include <string.h>
+#include "input.h"
 
 void printUsage() {
 	fprintf(stderr, "This program removes files or directories\n"
-			"Usage: rm [-rdiv] [<file/directory> ...]\n"
+			"Usage: ./rm [-rdiv] [<file/directory> ...]\n"
 			"\t-r: recursive\n"
 			"\t-d: empty directories\n"
 			"\t-i: interactive\n"
@@ -62,35 +63,6 @@ char* getFileName(char *path) {
 	if(nameStart != NULL) {
 		return nameStart+1;
 	}
-}
-
-void clearInputBuffer() {
-	char c;
-
-	while((c = getchar()) != '\n' && c != EOF) {}
-}
-
-bool invalidInput(char input) {
-	if(input != 'n' && input != 'N' && input != 'y' && input != 'Y')
-		return true;
-	else
-		return false;
-}
-
-bool positiveInput(char input) {
-	if(input == 'y' || input == 'Y') {
-		clearInputBuffer();
-		return true;
-	} else
-		return false;
-}
-
-bool negativeInput(char input) {
-		if(input == 'n' || input == 'N') {
-		clearInputBuffer();
-		return true;
-	} else
-		return false;
 }
 
 void walkPath(char *path, char *pathHistory, bool isInteractive, bool verbose) {
