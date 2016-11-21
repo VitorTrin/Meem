@@ -1,0 +1,27 @@
+RM Manual
+
+NAME
+	rm (remove)
+
+USAGE
+	./rm [OPTION]... [FILE]...
+
+DESCRIPTION
+	This function removes files or directories (not by default).
+	It has some options that you can see below:
+
+	-r
+		remove directories and their contents recursively
+
+	-d
+		remove empty directories only
+
+	-i
+		interactive mode: it asks the user for confirmation at every iteration
+
+	-v
+		print a message for each file/directory removed
+
+AUTHORS
+	Written by Lucas Roque, Vítor Trindade and Matheus Pasini.
+

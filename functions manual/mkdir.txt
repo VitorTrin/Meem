@@ -1,0 +1,24 @@
+MKDIR Manual
+
+NAME
+	mkdir (make directories)
+
+USAGE
+	./mkdir [OPTION]... DIRECTORY...
+
+DESCRIPTION
+	This function creates directories if they don't already exist.
+	It has some options that you can see below:
+
+	-m
+		set file mode (example: -m=777)
+
+	-v
+		print a message for each created directory
+
+	-p
+		create parent directories as needed
+
+AUTHORS
+	Written by Lucas Roque, Vítor Trindade and Matheus Pasini.
+

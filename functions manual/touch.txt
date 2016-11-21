@@ -1,0 +1,26 @@
+TOUCH Manual
+
+NAME
+	touch
+
+USAGE
+	./touch [OPTION]... FILE...
+
+DESCRIPTION
+	This function updates the acces and modification times of each FILE to the current time.
+	If the FILE doesn't exist, it will be created unless -c option is given.
+
+	It has some options that you can see below:
+
+	-a
+		change only the access time
+
+	-c
+		do not create file(s)
+
+	-m
+		change only the modification time
+
+AUTHORS
+	Written by Lucas Roque, Vítor Trindade and Matheus Pasini.
+
