@@ -96,7 +96,7 @@ void makeDir(char *path, char *directoryName, bool parents, bool verbose, int mo
 int main(int argc, char *argv[]) {
 	int option, mode = -1;
 	char path[PATH_MAX], *directoryName, *auxPath, *endPointer;
-	bool parents, verbose;
+	bool parents = false, verbose = false;
 
 	getcwd(path, sizeof(path));
 

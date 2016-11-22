@@ -15,9 +15,9 @@
 void printUsage() {
 	fprintf(stderr, "Update the access and modification times of each FILE to the current time.\n"
 			"Usage: touch [-mac] [<file/directory> ...]\n"
-			"\t -m: change only modification time"
-			"\t -a: change only access time"
-			"\t -c: do not create files"
+			"\t -m: change only modification time\n"
+			"\t -a: change only access time\n"
+			"\t -c: do not create files\n"
 			"For more information, please consult man\n");
 }
 
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
 {
 	char path[1024];
 	getcwd(path, sizeof(path));
-	bool create, access, modification = false;
+	bool create = false, access = false, modification = false;
 	int option;
 
 	//checa argumentos
