@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <errno.h>
 #include <string.h>
-#include "input.h"
+#include <libinput.h>
 
 void printUsage() {
 	fprintf(stderr, "This program removes files or directories\n"
